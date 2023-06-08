@@ -4,7 +4,7 @@ const user: User = {
     username: 'Ada',
     password: 'pwd123',
     email: 'ada@lovelace.com'
-}
+} 
 
 const todo: Todo = {
     id: 1,
