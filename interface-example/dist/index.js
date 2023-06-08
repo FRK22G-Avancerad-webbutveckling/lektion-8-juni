@@ -7,6 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// import users from './users';
+// console.log(users);
 const user = {
     username: 'Ada',
     password: 'pwd123',
@@ -28,5 +30,14 @@ function getTodos() {
         console.log(todosFromFetch);
     });
 }
+function getUsers() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch('./users.json'); // Använd detta för att hämta users.json
+        const data = yield response.json();
+        console.log('Hej');
+        console.log(data);
+    });
+}
 getTodos();
+getUsers();
 export {};

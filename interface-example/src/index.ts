@@ -1,5 +1,6 @@
 import { User, Todo } from './interfaces';
 
+
 const user: User = {
     username: 'Ada',
     password: 'pwd123',
@@ -26,4 +27,15 @@ async function getTodos() {
     console.log(todosFromFetch);
 }
 
+async function getUsers() {
+    const response = await fetch('./users.json'); // Använd detta för att hämta users.json
+    const data = await response.json();
+
+    console.log('Hej');
+    
+    console.log(data);
+}
+
 getTodos();
+
+getUsers();
